@@ -132,12 +132,12 @@ function dealerFirstDrawCard(){
     $('.undone2')
     .append('<div class="hidden-card"></div>')
     .addClass(`${card[0]} hide card`)
-    .append(`<img class="big" src="./icons/${card[0]}.svg">`)
-    .append(`<img class="small1" src="./icons/${card[0]}.svg">`)
-    .append(`<img class="small2" src="./icons/${card[0]}.svg">`)
+    .append(`<img class="big icon-${card[0]}" src="./icons/${card[0]}.svg">`)
+    .append(`<img class="small1 icon-${card[0]}" src="./icons/${card[0]}.svg">`)
+    .append(`<img class="small2 icon-${card[0]}" src="./icons/${card[0]}.svg">`)
     .removeClass('undone2')
-    .append(`<div class="top">${card[1]}</div>`)
-    .append(`<div class="bot">${card[1]}</div>`);
+    .append(`<div class="top letter-${card[0]}">${card[1]}</div>`)
+    .append(`<div class="bot letter-${card[0]}">${card[1]}</div>`);
     $('.dealer-cards').append('<div class="undone2"></div>');
     card = card.pop()
     if(card > 1)return parseInt(card);

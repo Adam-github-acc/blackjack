@@ -173,11 +173,6 @@ button{
     z-index: 1;
     color: yellow;
 }
-/*For color convertor https://codepen.io/sosuke/pen/Pjoqqp*/
-.icon-heart,
-.icon-diamond{
-    filter: invert(13%) sepia(76%) saturate(4974%) hue-rotate(354deg) brightness(97%) contrast(108%);
-}
 .letter-heart,
 .letter-diamond{
     color: #de1818;
@@ -310,4 +305,9 @@ button{
     width: 11rem;
     height: 18rem;
     position: absolute;
+}
+/*For color convertor https://codepen.io/sosuke/pen/Pjoqqp*/
+.icon-heart,
+.icon-diamond{
+    filter: invert(13%) sepia(76%) saturate(4974%) hue-rotate(354deg) brightness(97%) contrast(108%);
 }
