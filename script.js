@@ -19,7 +19,7 @@ const deckBuilder = () => {
     left = 100;
     left2 = 110;
     let cardColour = ["heart", "spade", "diamond", "club"];
-    let cardRank = 
+    let cardRank =
     ["A", "2", "3", "4", "5", "6", "7", "8",
      "9", "10", "J", "Q", "K"];
     for(let i = 0; i < cardRank.length; i++){
@@ -184,7 +184,7 @@ function drawAgain(){
         {setTimeout(()=>{
             dealDealerCard()
             dealerPoints += dealerDrawCard();
-            drawAgain(); 
+            drawAgain();
         }, 500)};
     };
     $('.dealer-points').text(`${dealerPoints}`);
@@ -204,6 +204,7 @@ function checkPlayerAce(){
 };
 function createOpeningTable(){
     dealDealerCard()
+    updateCash();
     dealerPoints += dealerFirstDrawCard();
     playerPoints += playerDrawCard();
     let openingPoints = dealerDrawCard();
@@ -292,7 +293,7 @@ function gameDone(){
     {setTimeout(() =>{
         checkWin();
     }, 500)};
-        if(totalCash === 0){ 
+        if(totalCash === 0){
             $('.restart-game').addClass('show');
             $('.play').removeClass('show');
             $('.btn-start-over').prop('disabled', true).removeClass('hover');
@@ -343,6 +344,7 @@ $(document).ready(function(){
         $('.player-points').text(`${playerPoints}`);
         $('.winning-message').remove();
         totalCash = 500;
+        updateCash();
         disableButton();
         $('.play').addClass('show');
         $('.restart-game').removeClass('show');
